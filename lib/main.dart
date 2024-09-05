@@ -1,125 +1,56 @@
+import 'package:currency_converter/currancy_converter_material_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
+  // const is used to create a constant object...
+  // to tell the compiler that the object is constant and immutable...
+  // runApp is the function to start the flutter code...
+  // widget is the building block of the flutter application...
+  // Hot reload is a feature of flutter that allows you to see the changes in the code without restarting the application...
+
+  // navigation is the process of moving from one screen to another screen...
+  // Navigator is the class that is used to navigate between screens...
+  // Navigator.push is the method that is used to navigate to a new screen...
+  // Navigator.pop is the method that is used to navigate to the previous screen...
 }
+
+// types of widgets:
+// 1. StatelessWidget
+// 2. StatefulWidget
+// 3. CupertinoWidget
+// 4. MaterialWidget
+
+// StatelessWidget:
+// 1. It is a widget that does not change its state...
+// 2. It is a widget that is immutable...
+// 3. It is a widget that is stateless...
+
+// StatefulWidget:
+// 1. It is a widget that changes its state...
+// 2. It is a widget that is mutable...
+// 3. It is a widget that is stateful...
+
+// CupertinoWidget:
+// 1. It is a widget that is used to create a Cupertino style application...
+
+// MaterialWidget:
+// 1. It is a widget that is used to create a Material style application...
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    // MaterialApp is the widget that is used to create a Material style application...
+    return const MaterialApp(
+      home: CurreencyConverterMaterialPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+// Material Design is a design language developed by Google in 2014...
+// It is a comprehensive guide for visual, motion, and interaction design across platforms and devices...
+// It is a design language that is used to create a consistent and predictable user experience across different platforms and devices...
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
+// Cupertino Design is a design language developed by Apple in 2010...
+// It is a design language that is used to create a consistent and predictable user experience across different platforms and devices...
