@@ -20,6 +20,16 @@ class _CurreencyConverterMaterialPageState
     result = 0;
   }
 
+  @override
+  void dispose() {
+    inrController.dispose();
+    super.dispose();
+    // the dispose method is used to dispose of the controller when the widget is disposed of
+    // it is used to free up the resources
+    // it is called when the widget is removed from the widget tree
+    // generally it avoids memory leaks
+  }
+
   // define a method to convert the amount from inr to usd
   void convertToUSD() {
     setState(() {

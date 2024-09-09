@@ -1,5 +1,7 @@
 import 'package:currency_converter/currancy_converter_material_page.dart';
+// import 'package:currency_converter/lifecycleWidget.dart';
 import 'package:flutter/material.dart';
+import 'app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,9 +44,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // MaterialApp is the widget that is used to create a Material style application...
-    return const MaterialApp(
-      home: CurreencyConverterMaterialPage(),
-    );
+    return MaterialApp(
+        theme: lightTheme, home: CurreencyConverterMaterialPage());
   }
 }
 
